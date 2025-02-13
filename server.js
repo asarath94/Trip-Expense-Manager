@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 // ✅ Serve static files (Move this above routes)
-app.use(express.static("public"));
+//app.use(express.static("public"));
 
 // ✅ Middleware to parse JSON
 app.use(express.json());

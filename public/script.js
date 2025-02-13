@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function fetchAndDisplaySummary() {
   try {
-    const response = await fetch("/sheets/summary");
+    const BASE_URL = "https://trip-expense-manager.onrender.com";
+    const response = await fetch(`${BASE_URL}/sheets/summary`);
     const result = await response.json();
 
     if (result.success) {
@@ -83,7 +84,8 @@ document
     };
 
     try {
-      const response = await fetch("/sheets/add", {
+      const BASE_URL = "https://trip-expense-manager.onrender.com";
+      const response = await fetch(`${BASE_URL}/sheets/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
