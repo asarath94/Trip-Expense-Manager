@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trip Expense Manager</h1>
+
+      <!-- Expense Form -->
+      <section id="expense-form">
+        <h2>Record an Expense</h2>
+
+        <form id="expenseForm">
+          <!-- Date -->
+          <label for="expense-date">Date:</label>
+          <input type="date" id="expense-date" name="expense-date" required />
+          <br />
+
+          <!-- Paid By (Dropdown) -->
+          <label for="paid-by">Paid By:</label>
+          <select id="paid-by" name="paid-by" required>
+            <option value="Sarath">Sarath</option>
+            <option value="Syam">Syam</option>
+            <option value="Sudheer">Sudheer</option>
+          </select>
+          <br />
+
+          <!-- Expense Description -->
+          <label for="expense-description">Expense Description:</label>
+          <textarea
+            id="expense-description"
+            name="expense-description"
+            rows="4"
+            required
+          ></textarea>
+          <br />
+
+          <!-- Amount Paid -->
+          <label for="amount-paid">Amount Paid:</label>
+          <input type="number" id="amount-paid" name="amount-paid" required />
+          <br />
+
+          <!-- Shared By (Multiple selections with checkboxes) -->
+          <label for="shared-by">Shared By:</label>
+          <div id="shared-by" class="checkbox-group">
+            <div class="checkbox-group-item">
+              <label for="shared-sarath">Sarath</label>
+              <input
+                type="checkbox"
+                id="shared-sarath"
+                name="shared-by"
+                value="Sarath"
+              />
+            </div>
+            <div class="checkbox-group-item">
+              <label for="shared-syam">Syam</label>
+              <input
+                type="checkbox"
+                id="shared-syam"
+                name="shared-by"
+                value="Syam"
+              />
+            </div>
+            <div class="checkbox-group-item">
+              <label for="shared-sudheer">Sudheer</label>
+              <input
+                type="checkbox"
+                id="shared-sudheer"
+                name="shared-by"
+                value="Sudheer"
+              />
+            </div>
+          </div>
+          <br />
+
+          <!-- Submit Button -->
+          <button type="submit">Submit Expense</button>
+        </form>
+      </section>
+
+      <!-- Display Expenses -->
+      <section id="expense-list">
+        <h2>Summary:</h2>
+        <div id="expense-list-content"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
