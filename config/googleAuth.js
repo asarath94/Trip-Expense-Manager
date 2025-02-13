@@ -1,8 +1,7 @@
 const { google } = require("googleapis");
-const { readFileSync } = require("fs");
 
 // Load credentials
-const credentials = JSON.parse(readFileSync("credentials.json"));
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 // Authenticate using Service Account
 const auth = new google.auth.GoogleAuth({
