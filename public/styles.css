@@ -3,24 +3,22 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #404040;
   color: #333;
-}
-
-/* Header styling */
-header {
-  background-color: #ff914d;
-  padding: 20px;
-  text-align: center;
-  color: white;
 }
 
 h1 {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 600;
+  color: #d4cece;
+  text-shadow: 0 0 10px black;
 }
 
+h2 {
+  color: #d4cece;
+  margin-top: 0px;
+}
 /* Container for the entire page */
 .container {
   width: 80%;
@@ -33,14 +31,9 @@ h1 {
 section {
   padding: 20px;
   margin: 20px 0px;
-  background-color: white;
+  background-color: rgb(28, 28, 28);
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Expense form styling */
-#expense-form {
-  margin-bottom: 30px;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 form label {
@@ -48,6 +41,7 @@ form label {
   margin-bottom: 8px;
   display: block;
   font-weight: bold;
+  color: #d4cece;
 }
 
 form input,
@@ -58,8 +52,10 @@ form textarea {
   width: 97%;
   margin-bottom: 15px;
   margin-right: 20px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 5px;
+  background-color: #404040;
+  color: #d4cece;
 }
 
 form button {
@@ -79,12 +75,13 @@ form button:hover {
 
 form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 10px;
+  height: 40px;
 }
 
 /* Expense list styling */
 #expense-list {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 table {
@@ -107,11 +104,13 @@ table th {
 }
 
 table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #404040;
+  color: #d4cece;
 }
 
-table tr:hover {
-  background-color: #f1f1f1;
+table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+  font-weight: bold;
 }
 
 /* Responsive design */
